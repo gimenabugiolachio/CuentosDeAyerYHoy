@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#cuentosAH{
+    width: 15rem;
+    position: relative;
+    left: -8rem;
+}
+
+.nav-container-fluid{
+    display: flex;
+    flex-direction: row;
+    background: #98685A;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-around;
+    position: fixed;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+section{
+    width: 100vw;
+    overflow: hidden;
+}
+
+.nav-container-fluid h3{
+    margin-left: 2rem;
+}
+
+.navbar-container a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 5rem;
+}
+
+.navbar-container a:hover{
+    color: #4F5E8C;
+}
+
+#inicio{
+    width: 100vw;
+    height: 100vh;
+    background: #D3CEC5;
+    padding-top: 7rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.presentacion-container{
+    display: flex;
+    flex-direction:row-reverse;
+}
+
+#img-inicio{
+    width: 40rem;
+    margin-right: 2rem;
+}
+
+.texto-presentacion{
+    max-width: 700px;
+    position: relative;
+    top: 10rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    left: 2rem;
+}
+
+.texto-presentacion p{
+    margin-bottom: .5rem;
+    color: black;
+}
+
+.texto-presentacion span{
+    color: #98685A;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+#cuentos{
+    width: 100vw;
+    height: 100vh;
+    background: #B59A8D;
+}
+
+.titulo-cuentos{
+   position: relative;
+   top: 7rem;
+   left: 4rem;
+}
+
+.card-container{
+    position: relative;
+    top: 15rem;
+    left: 3%;
+    display: flex;
+
+}
+
+.card{
+   position: relative;
+    width: 300px;
+    height: 350px;  
+    margin-left: 1rem;  
+}
+
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow:  0 5px 10px #000;
+}
+
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .atras{
+    transform: perspective(600px) rotateY(180deg);
+    background: #D3CEC5;
+    padding: 15px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .atras .link{
+   border-top: 1px solid #f3f3f3;
+   height: 50px;
+   line-height: 50px;
+}
+
+.card .atras .link a{
+    text-decoration: none;
+    color: #000;
+   position: relative;
+   left: 35%;
+   font-weight: bold;
+}
+
+.card .atras .link a:hover{
+    color:#98685A;
+    border-bottom: 2px solid #f3f3f3;
+}
+
+.card .atras h3{
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.card .atras p{
+    letter-spacing: 1px;
+    font-family: 'Chilanka', cursive;
+}
+
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .atras{
+    transform: perspective(600px) rotateY(360deg);
+}
+
